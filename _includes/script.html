@@ -1,0 +1,17 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.0.201604172/pdfobject.min.js"></script>
+<script type="text/javascript">
+$('.button-collapse').sideNav({
+    menuWidth: 300, // Default is 240
+    edge: 'right', // Choose the horizontal origin
+    closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+  }
+);
+$('.modal-trigger').leanModal();
+</script>
+<script>
+//Be sure your document contains an element with the CSS selector "lala"
+PDFObject.embed("https://www.bluej.org/tutorial/tutorial-201.pdf", "#lala");
+</script>
+<!-- CONSIDER VIEWER.JS http://viewerjs.org/ -->

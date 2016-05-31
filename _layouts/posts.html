@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<article class="post">
+  <h1>{{ page.title }}</h1>
+  <div class="entry justify">
+    {{ content }}
+  </div>
+  <div class="date">
+    Written on {{ page.date | date: "%B %e, %Y" }}
+  </div>
+  <!-- include disqus.html -->
+  <div class="green center white-text">
+    <p>
+      COMMENT SECTION HERE
+    </p>
+  </div>
+</article>

@@ -1,0 +1,33 @@
+/* flexbox */
+.page-flexbox-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* custom stuff */
+.pad {
+  padding-left: 30px;
+}
+
+.justify {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* footer */
+footer i {
+  color: #fff;
+}
+
+/* tests - participants */
+.modal.bottom-sheet {
+  max-height: 100%;
+}
+
+.pdfobject-container { height: 500px;}
+.pdfobject { border: none; }

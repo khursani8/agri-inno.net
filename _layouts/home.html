@@ -1,0 +1,87 @@
+---
+layout: default
+---
+<!-- Header -->
+<div class="grey lighten-3">
+  <div class="container section row">
+    <div class="col s12 center-align">
+      {{ content }}
+    </div>
+  </div>
+</div>
+
+<!-- Portfolio -->
+<div class="section center">
+  <h5>Portfolio</h5>
+  <h6>LATEST PUBLICATION</h6><hr>
+  <div class="row">
+    <img class="materialboxed col s2" src="http://labs.qnimate.com/portfolio-materialize/images/project.png">
+    <img class="materialboxed col s2" src="http://labs.qnimate.com/portfolio-materialize/images/project.png">
+    <img class="materialboxed col s2" src="http://labs.qnimate.com/portfolio-materialize/images/project.png">
+    <img class="materialboxed col s2" src="http://labs.qnimate.com/portfolio-materialize/images/project.png">
+    <img class="materialboxed col s2" src="http://labs.qnimate.com/portfolio-materialize/images/project.png">
+    <img class="materialboxed col s2" src="http://labs.qnimate.com/portfolio-materialize/images/project.png">
+  </div>
+</div>
+
+<!-- Videos -->
+<div class="grey lighten-1">
+  <div class="container section row">
+    <div class="col s12 center">
+      <h6>Watch the Agri-Innovation talks &nbsp;&nbsp;&nbsp;<a class="waves-effect btn black">Watch</a></h6>
+    </div>
+  </div>
+</div>
+
+<!-- Blog/News -->
+<div class="">
+  <div class="row">
+    <div class="col s9">
+      <div class="container">
+        <div class="section">
+          <h5>Latest Posts</h5>
+          {% for post in site.categories['blog'] limit:3 %}
+          <div class="card-panel hoverable white">
+            <span class="black-text">
+              <p><a href="{{ post.url }}.html">{{ post.title }}.</a></p>
+              <div class="justify">
+                {{ post.excerpt }}
+                Read more
+              </div>
+            </span>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="col s3 brown lighten-3">
+      <div class="container section">
+        <h5>News</h5>
+        {% for post in site.categories['project'] limit:1 %}
+        <p><a href="{{ post.url }}.html">{{ post.title }}.</a></p>
+        <div class="justify">{{ post.excerpt }}</div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Materials -->
+<div class="grey lighten-1">
+  <div class="container section row">
+    <div class="col s12 center">
+      <h6>Materials</h6>
+    </div>
+  </div>
+</div>
+<div class="section row">
+  {% for file in site.data.materials %}
+  <div class="col s2">
+    <div class="card-panel hoverable grey lighten-3">
+      <span class="black-text center">
+        {{ file.day }}
+      </span>
+    </div>
+  </div>
+  {% endfor %}
+</div>

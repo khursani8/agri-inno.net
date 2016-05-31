@@ -1,0 +1,16 @@
+<nav class="blue-grey lighten-3">
+  <div class="container nav-wrapper">
+    <a href="/" class="brand-logo left">Agri-Inno</a>
+    <a href="#" data-activates="mobile-nav" class="button-collapse right"><i class="fa fa-bars menu"></i></a>
+    <ul id="standard-nav" class="right hide-on-med-and-down">
+      {% for menu in site.data.navigation %}
+      <li><a href="{{ menu.link }}">{{ menu.name }}</a></li>
+      {% endfor %}
+    </ul>
+    <ul id="mobile-nav" class="side-nav center-align">
+      {% for menu in site.data.navigation %}
+      <li><a href="{{ menu.link }}">{{ menu.name }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,21 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+---
+<div class="container">
+  <div class="section">
+    {% for post in site.categories['blog']%}
+    <ul class="collapsible" data-collapsible="expandable">
+      <li>
+        <div class="collapsible-header active"><h4>{{ post.title }}</h4></div>
+        <div class="collapsible-body section">
+          <div class="pad">{{ post.date | date: "%b %-d, %Y" }} | By: {{ post.author }}</div>
+          <div class="justify">{{ post.excerpt }}</div>
+          <div class="pad"><a href="{{ post.url }}.html">[Read More]</a></div>
+        </div>
+      </li>
+    </ul>
+    {% endfor %}
+  </div>
+</div>
