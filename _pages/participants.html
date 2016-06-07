@@ -3,44 +3,33 @@ layout: default
 title: Participants
 permalink: /participants
 ---
+{% include wrap.html %}
 
-
-<div class="section">
-  <table class="striped centered responsive-table">
-    <thead>
-      <tr>
-        <th data-field="id">Name</th>
-        <th data-field="name">Institute</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr>
-        <td><a class="modal-trigger" href="#modal2">John Doe</a></td>
-        <td>CFF</td>
-      </tr>
-      <tr>
-        <td>Alvin Joe</td>
-        <td>CFF</td>
-      </tr>
-      <tr>
-        <td>Alan Chang</td>
-        <td>Reading</td>
-      </tr>
-      <tr>
-        <td>Jonathan Paw</td>
-        <td>UM</td>
-      </tr>
-    </tbody>
-  </table>
+<div class="section row">
+  {% for people in site.data.participants %}
+  <div class="col s12 m6 l3">
+    <div class="card blue-grey darken-1">
+      <div class="card-content center white-text">
+        <img src="http://labs.qnimate.com/portfolio-materialize/images/profile.png" width="64" height="64">
+        <p>{{ people.name }}</p>
+      </div>
+      <div class="card-action center">
+        <a class="modal-trigger" href="#modal2">Biography</a>
+        <a href="#">Proposal</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
 </div>
+
+
 
 
 <!-- Modal Structure -->
 <div id="modal2" class="modal bottom-sheet">
   <div class="modal-content">
-    <h4>John Doe</h4>
-    <p>Short desc/contact/social ???</p>
+    <h4>Biography</h4>
+    <p>Short desc/contact/social</p>
 
     <ul class="collapsible popout" data-collapsible="expandable">
       <li>

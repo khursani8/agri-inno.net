@@ -15,8 +15,36 @@ include:
   - _pages
   - assets
 
+gems:
+  - jekyll-gallery-generator
+
 # Compression
 compress_html:
   clippings: all
 sass:
   style: compressed
+
+# Gallery
+gallery:
+  # path to the gallery
+  dir: gallery
+  # title for gallery index
+  title: "Gallery"
+  # title prefix for gallery page. title=title_prefix+gallery_name
+  title_prefix: "Photos: "
+  # field to control sorting of galleries for the index page
+  # (possible values are: title, date_time, best_image)
+  sort_field: "date_time"
+  # sizes for thumbnails
+  thumbnail_size:
+    x: 400
+    y: 400
+  # custom configuration for individual gallery
+  # best_image is image for the index page (defaults to last image)
+  galleries:
+    Day1:
+      best_image: C0029.jpg
+    Day2:
+      best_image: C0049.jpg
+    Day3:
+      best_image: C0078.jpg

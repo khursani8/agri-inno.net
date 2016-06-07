@@ -4,12 +4,12 @@
     <a href="#" data-activates="mobile-nav" class="button-collapse right"><i class="fa fa-bars menu"></i></a>
     <ul id="standard-nav" class="right hide-on-med-and-down">
       {% for menu in site.data.navigation %}
-      <li><a href="{{ menu.link }}">{{ menu.name }}</a></li>
+      <li{% if page.title == menu.name %} class="active"{% endif %}><a href="{{ menu.link }}">{{ menu.name }}</a></li>
       {% endfor %}
     </ul>
     <ul id="mobile-nav" class="side-nav center-align">
       {% for menu in site.data.navigation %}
-      <li><a href="{{ menu.link }}">{{ menu.name }}</a></li>
+      <li{% if page.title == menu.name %} class="active"{% endif %}><a href="{{ menu.link }}">{{ menu.name }}</a></li>
       {% endfor %}
     </ul>
   </div>

@@ -1,0 +1,18 @@
+---
+layout: default
+---
+{% include wrap.html %}
+
+<p><a href="/{{ site.gallery.dir }}">Back</a></p>
+<hr>
+
+<div class="section row">
+  {% for image in page.images %}
+  <div class="col s4">
+    <a name="{{ image }}"></a>
+    <a href="{{ image }}"{% if site.gallery.lightbox %} rel="lightbox[{{ page.gallery }}]"{% endif %}>
+      <img class="gallery-image" src="thumbs/{{ image }}" />
+    </a>
+  </div>
+  {% endfor %}
+</div>

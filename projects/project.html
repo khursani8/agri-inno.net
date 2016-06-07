@@ -1,0 +1,19 @@
+---
+layout: default
+title: Projects
+permalink: /projects/
+---
+{% include wrap.html %}
+<div class="container section">
+  {% for post in site.categories['projects']%}
+  <ul class="collapsible" data-collapsible="expandable">
+    <li class="center">
+      <div class="collapsible-header active"><h4>{{ post.title }}</h4></div>
+      <div class="collapsible-body section">
+        <div>{{ post.excerpt }}</div>
+        <div class="pad"><a href="{{ post.url }}.html">[View More]</a></div>
+      </div>
+    </li>
+  </ul>
+  {% endfor %}
+</div>

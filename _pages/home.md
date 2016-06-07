@@ -6,4 +6,4 @@ permalink: /
 
 ##### CFF - University of Reading
 
-Building resilience to climate change in Malaysia through innovative and sustainable agricultural technologies.
+Building resilience to climate change through innovative and sustainable agricultural technologies.

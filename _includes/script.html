@@ -3,12 +3,15 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.0.201604172/pdfobject.min.js"></script>
 <script type="text/javascript">
 $('.button-collapse').sideNav({
-    menuWidth: 300, // Default is 240
-    edge: 'right', // Choose the horizontal origin
-    closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-  }
-);
+  menuWidth: 300, // Default is 240
+  edge: 'right', // Choose the horizontal origin
+  closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+});
 $('.modal-trigger').leanModal();
+$('.slider').slider({
+  full_width: true,
+  indicators: false
+});
 </script>
 <script>
 //Be sure your document contains an element with the CSS selector "lala"

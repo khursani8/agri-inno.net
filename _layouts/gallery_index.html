@@ -1,0 +1,15 @@
+---
+layout: default
+---
+{% include wrap.html %}
+
+add lighbox2 support http://lokeshdhakar.com/projects/lightbox2/
+
+<div class="container section row">
+  {% for gallery in page.galleries %}
+  <div class="col s6">
+    <a href="{{ gallery['gallery'] }}"><img class="gallery-best-image" src="{{ gallery['gallery'] }}/thumbs/{{ gallery['best_image'] }}"></a>
+    <h6><a href="{{ gallery['gallery'] }}">{{ gallery["name"] }}</a> | {{ gallery["images"] | size }} image{% if gallery["images"].size != 1 %}s{% endif %}</h6>
+  </div>
+  {% endfor %}
+</div>
