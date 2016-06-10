@@ -1,0 +1,36 @@
+---
+layout: default
+title: Videos
+permalink: /videos
+---
+<!-- header -->
+<div class="header blue-grey lighten-3">
+  <div class="container section">
+    <h4 class="flow-text center-align">CFF Agri Innovation Workshop Videos &amp; Talks</h4>
+  </div>
+</div>
+
+<!-- videos -->
+<div class="container section row">
+  {% for videos in site.data.videos %}
+  <div class="col s12 m12 l6">
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/{{ videos.youtube }}" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <ul class="collapsible" data-collapsible="accordion">
+      <li>
+        <div class="collapsible-header"><i class="fa fa-caret-down right"></i>{{ videos.title }}</div>
+        <div class="collapsible-body">
+          <p class="grey lighten-2">{{ videos.detail1 }}</p>
+          <p>{{ videos.Speaker }}</p>
+          <p class="grey lighten-2">{{ videos.detail2 }}</p>
+          <p>{{ videos.position }}</p>
+          <p class="grey lighten-2 center-align">
+            <a class="waves-effect waves-light btn grey" href="http://www.agri-inno.net/agri-inno-Videos/{{ videos.download }}"><i class="fa fa-cloud-download left"></i>Download</a>
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  {% endfor %}
+</div>

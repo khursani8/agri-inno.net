@@ -3,7 +3,6 @@ title: Agri-Inno
 description: Agri-Innovation Workshop 2016
 
 # Build settings
-baseurl: "/"
 permalink: /:categories/:title
 markdown: kramdown
 
@@ -17,6 +16,7 @@ include:
 
 gems:
   - jekyll-gallery-generator
+  - jekyll-sitemap
 
 # Compression
 compress_html:
@@ -31,7 +31,7 @@ gallery:
   # title for gallery index
   title: "Gallery"
   # title prefix for gallery page. title=title_prefix+gallery_name
-  title_prefix: "Photos: "
+  title_prefix: "Gallery | "
   # field to control sorting of galleries for the index page
   # (possible values are: title, date_time, best_image)
   sort_field: "date_time"

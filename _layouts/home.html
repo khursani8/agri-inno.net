@@ -12,15 +12,17 @@ layout: default
 <div class="grey lighten-1">
   <div class="container section row">
     <div class="col s12 center">
-      <h6>Watch the Agri-Inno talks &nbsp;&nbsp;&nbsp;<a class="waves-effect btn black" href="http://agri-inno.net/videos">Watch</a></h6>
+      <h6>Watch the Agri-Inno talks &nbsp;&nbsp;&nbsp;<a class="waves-effect btn black" href="/videos">Watch</a></h6>
     </div>
   </div>
 </div>
 
-<!-- Blog/News -->
+<!-- Poster -->
+<img src="/assets/images/agri-inno.png" alt="Agri-Inno" class="responsive-img" />
 <div class="section row">
-  <div class="col s9">
-    <div class="container">
+  <!-- Blog -->
+  <div class="col s8">
+    <div class="section">
       <h5>Latest Posts</h5>
       {% for post in site.categories['blog'] limit:3 %}
       <div class="card-panel white">
@@ -35,13 +37,16 @@ layout: default
       {% endfor %}
     </div>
   </div>
-  <div class="col s3 brown lighten-4">
+  <!-- News -->
+  <div class="col s4">
     <div class="section">
       <h5>News</h5>
-      {% for post in site.categories['projects'] limit:2 %}
-      <p><a href="{{ post.url }}.html">{{ post.title }}.</a></p>
-      <div class="justify">{{ post.excerpt }}</div>
-      {% endfor %}
+      <div class="card-panel white">
+        {% for post in site.categories['projects'] limit:2 %}
+        <p><a href="{{ post.url }}.html">{{ post.title }}.</a></p>
+        <div class="justify">{{ post.excerpt }}</div>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </div>
@@ -50,7 +55,7 @@ layout: default
 <div class="grey lighten-1">
   <div class="container section row">
     <div class="col s12 center">
-      <h6>Get the Agri-Inno materials &nbsp;&nbsp;&nbsp;<a class="waves-effect btn black">Download</a></h6>
+      <h6>Get the Agri-Inno materials &nbsp;&nbsp;&nbsp;<a class="waves-effect btn black" href="#">Download</a></h6>
     </div>
   </div>
 </div>

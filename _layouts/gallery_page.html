@@ -2,16 +2,16 @@
 layout: default
 ---
 {% include wrap.html %}
-
-<p><a href="/{{ site.gallery.dir }}">Back</a></p>
-<hr>
-
-<div class="section row">
+<nav class="white">
+  <div class="nav-wrapper col s12">
+    <a href="/gallery" class="breadcrumb grey-text darken-2">&nbsp;&nbsp;&nbsp;Back to Main Gallery</a>
+  </div>
+</nav>
+<div class="section row" id="lightgallery">
   {% for image in page.images %}
-  <div class="col s4">
-    <a name="{{ image }}"></a>
-    <a href="{{ image }}"{% if site.gallery.lightbox %} rel="lightbox[{{ page.gallery }}]"{% endif %}>
-      <img class="gallery-image" src="thumbs/{{ image }}" />
+  <div class="col s12 m4 l3">
+    <a class="images responsive-img" href="{{ image }}">
+      <img class="gallery-image responsive-img" src="thumbs/{{ image }}" />
     </a>
   </div>
   {% endfor %}

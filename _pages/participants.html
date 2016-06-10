@@ -4,39 +4,42 @@ title: Participants
 permalink: /participants
 ---
 {% include wrap.html %}
-
 <div class="section row">
-  {% for people in site.data.participants %}
-  <div class="col s12 m6 l3">
-    <div class="card blue-grey darken-1">
-      <div class="card-content center white-text">
-        <img src="http://labs.qnimate.com/portfolio-materialize/images/profile.png" width="64" height="64">
-        <p>{{ people.name }}</p>
-      </div>
-      <div class="card-action center">
-        <a class="modal-trigger" href="#modal2">Biography</a>
-        <a href="#">Proposal</a>
+  <!-- Search -->
+  <div class="input-field col s12">
+    <i class="material-icons prefix">search</i>
+    <input id="search" type="text" data-list=".participants">
+    <label for="search">Search Name</label>
+  </div>
+  <!-- Card Structure -->
+  <div class="participants">
+    {% for user in site.data.participants %}
+    <div class="col s12 m6 l3">
+      <div class="card blue-grey darken-1">
+        <div class="card-content center white-text">
+          <img src="http://labs.qnimate.com/portfolio-materialize/images/profile.png" width="64" height="64" class="responsive-img circle">
+          <p>{{ user.name }}</p>
+        </div>
+        <div class="card-action center">
+          <a class="modal-trigger" href="#{{ user.id }}">Biography</a>
+          <a href="#">Contact</a>
+        </div>
       </div>
     </div>
+    {% endfor %}
   </div>
-  {% endfor %}
 </div>
 
-
-
-
 <!-- Modal Structure -->
-<div id="modal2" class="modal bottom-sheet">
+{% for user in site.data.participants %}
+<div id="{{ user.id }}" class="modal bottom-sheet">
   <div class="modal-content">
-    <h4>Biography</h4>
-    <p>Short desc/contact/social</p>
-
-    <ul class="collapsible popout" data-collapsible="expandable">
+    <h4>{{ user.name }}</h4>
+    <ul class="collapsible popout justify" data-collapsible="expandable">
       <li>
         <div class="collapsible-header">Biography</div>
         <div class="collapsible-body">
           <p>
-
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam quasi maxime quas repudiandae nam id temporibus, at et non officiis consectetur voluptate deserunt officia minima placeat tempore illum asperiores quo assumenda praesentium?
 
             Facilis libero error ratione doloribus debitis delectus asperiores minima ab velit quam. Natus ea, vero totam recusandae autem, corporis minima, animi eos perferendis omnis ut asperiores magni tempore. Repellendus aliquam saepe perspiciatis laborum, excepturi sit libero dignissimos debitis eaque itaque quos, accusantium sed amet tempora temporibus perferendis possimus, quisquam minus fuga! Laudantium, tenetur, consectetur! Quas itaque hic consequatur accusamus consectetur, quia odio eos amet quasi pariatur! Ratione, similique.
@@ -78,31 +81,13 @@ permalink: /participants
             Facilis libero error ratione doloribus debitis delectus asperiores minima ab velit quam. Natus ea, vero totam recusandae autem, corporis minima, animi eos perferendis omnis ut asperiores magni tempore. Repellendus aliquam saepe perspiciatis laborum, excepturi sit libero dignissimos debitis eaque itaque quos, accusantium sed amet tempora temporibus perferendis possimus, quisquam minus fuga! Laudantium, tenetur, consectetur! Quas itaque hic consequatur accusamus consectetur, quia odio eos amet quasi pariatur! Ratione, similique.
 
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam quasi maxime quas repudiandae nam id temporibus, at et non officiis consectetur voluptate deserunt officia minima placeat tempore illum asperiores quo assumenda praesentium?
-
-            <div id="lala">
-
-            </div>
-
           </p>
         </div>
       </li>
     </ul>
-
-
-
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam quasi maxime quas repudiandae nam id temporibus, at et non officiis consectetur voluptate deserunt officia minima placeat tempore illum asperiores quo assumenda praesentium?
-
-      Facilis libero error ratione doloribus debitis delectus asperiores minima ab velit quam. Natus ea, vero totam recusandae autem, corporis minima, animi eos perferendis omnis ut asperiores magni tempore. Repellendus aliquam saepe perspiciatis laborum, excepturi sit libero dignissimos debitis eaque itaque quos, accusantium sed amet tempora temporibus perferendis possimus, quisquam minus fuga! Laudantium, tenetur, consectetur! Quas itaque hic consequatur accusamus consectetur, quia odio eos amet quasi pariatur! Ratione, similique.
-
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam quasi maxime quas repudiandae nam id temporibus, at et non officiis consectetur voluptate deserunt officia minima placeat tempore illum asperiores quo assumenda praesentium?
-
-      Facilis libero error ratione doloribus debitis delectus asperiores minima ab velit quam. Natus ea, vero totam recusandae autem, corporis minima, animi eos perferendis omnis ut asperiores magni tempore. Repellendus aliquam saepe perspiciatis laborum, excepturi sit libero dignissimos debitis eaque itaque quos, accusantium sed amet tempora temporibus perferendis possimus, quisquam minus fuga! Laudantium, tenetur, consectetur! Quas itaque hic consequatur accusamus consectetur, quia odio eos amet quasi pariatur! Ratione, similique.
-
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam quasi maxime quas repudiandae nam id temporibus, at et non officiis consectetur voluptate deserunt officia minima placeat tempore illum asperiores quo assumenda praesentium?
-    </p>
   </div>
   <div class="modal-footer">
     <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
   </div>
 </div>
+{% endfor %}
