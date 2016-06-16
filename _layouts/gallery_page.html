@@ -4,14 +4,14 @@ layout: default
 {% include wrap.html %}
 <nav class="white">
   <div class="nav-wrapper col s12">
-    <a href="/gallery" class="breadcrumb grey-text darken-2">&nbsp;&nbsp;&nbsp;Back to Main Gallery</a>
+    <a href="/gallery" class="breadcrumb light-green-text">&nbsp;&nbsp;&nbsp;Back to Main Gallery</a>
   </div>
 </nav>
 <div class="section row" id="lightgallery">
   {% for image in page.images %}
   <div class="col s12 m4 l3">
     <a class="images responsive-img" href="{{ image }}">
-      <img class="gallery-image responsive-img" src="thumbs/{{ image }}" />
+      <img class="gallery-image responsive-img lazy" data-src="thumbs/{{ image }}" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDAwIiBoZWlnaHQ9Ijc4MCI+PHBhdGggZmlsbD0iIzM2M0EzRSIgZD0iTTAgMGgxNDAwdjc4MEgweiIvPjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzQzNDc0QiIgc3Ryb2tlLXdpZHRoPSIzMCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBkPSJNNDYzLjMgMjEyLjVoNDczLjR2MzU1SDQ2My4zem0xNDIgOTYuNmMwIDIwLTE2IDM2LTM2IDM2LTE5LjcgMC0zNS44LTE2LTM1LjgtMzYgMC0xOS41IDE2LTM1LjYgMzYtMzUuNiAxOS44IDAgMzUuOCAxNiAzNS44IDM2em0yNzMuNCAxOTguN0g1MjMuM2w0Ny4zLTEwMS4zIDMwIDQ0LjJMNzAwLjggMjk4bDcxLjggMTA4IDM0LTM3eiIvPjwvc3ZnPg==" />
     </a>
   </div>
   {% endfor %}

@@ -1,0 +1,26 @@
+/* nav */
+.nav-wrapper {
+  a {
+    color: #000;
+    &:hover { color: green; }
+  }
+  img {
+    max-height: 60px;
+    padding: 5px 0px;
+  }
+}
+
+/* Modal */
+.modal.bottom-sheet { max-height: 100%; }
+
+/* custom style */
+.pad {padding-left: 30px;}
+.minus-20 { margin-top: -20px; }
+.plus-20 { margin-bottom: -20px; }
+.top-right { top: 10px; right: 10px; }
+.justify { text-align: justify; text-justify: inter-word; }
+
+/* participants */
+#bio { &:hover, &.active { background-color: $orange-cff; }}
+#abs { &:hover, &.active { background-color: $green-cff; }}
+#pos { &:hover, &.active { background-color: $blue-cff; color: #fff;}}

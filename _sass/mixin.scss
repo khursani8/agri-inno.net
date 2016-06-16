@@ -1,0 +1,10 @@
+/* Vendor Prefixes */
+$prefixes: webkit moz;
+@mixin prefix($declarations) {
+  @each $property, $value in $declarations {
+    @each $prefix in $prefixes {
+      #{'-' + $prefix + '-' + $property}: $value;
+    }
+    #{$property}: $value;
+  }
+}

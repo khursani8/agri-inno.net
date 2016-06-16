@@ -1,13 +1,13 @@
 # Site settings
 title: Agri-Inno
-description: Agri-Innovation Workshop 2016
+description: Agri-Innovation
 
 # Build settings
 permalink: /:categories/:title
 markdown: kramdown
 
 # Custom variables
-version: "1.3"
+version: "2.0"
 timezone: Asia/Kuala_Lumpur
 
 include:
@@ -42,9 +42,15 @@ gallery:
   # custom configuration for individual gallery
   # best_image is image for the index page (defaults to last image)
   galleries:
-    Day1:
-      best_image: C0029.jpg
-    Day2:
-      best_image: C0049.jpg
-    Day3:
-      best_image: C0078.jpg
+    Day 1:
+      best_image:
+    Day 2:
+      best_image: HAZ_6323.jpg
+    Day 3:
+      best_image:
+    Day 4:
+      best_image:
+    Day 5:
+      best_image:
+    Extra:
+      best_image: aSYU_8851.jpg

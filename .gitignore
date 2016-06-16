@@ -3,3 +3,4 @@ _site
 bower.json
 .sass-cache
 bower_component
+.jekyll-metadata

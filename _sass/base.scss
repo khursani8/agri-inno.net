@@ -1,0 +1,21 @@
+/* base color */
+$orange-cff: #fb8c00;
+$green-cff: #66bb6a;
+$blue-cff: #1E5F83;
+
+html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, img {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* flexbox */
+.page-flexbox-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+a:hover { color: green; }

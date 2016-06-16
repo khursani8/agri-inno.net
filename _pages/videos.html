@@ -4,7 +4,7 @@ title: Videos
 permalink: /videos
 ---
 <!-- header -->
-<div class="header blue-grey lighten-3">
+<div class="header orange darken-1">
   <div class="container section">
     <h4 class="flow-text center-align">CFF Agri Innovation Workshop Videos &amp; Talks</h4>
   </div>
@@ -19,18 +19,32 @@ permalink: /videos
     </div>
     <ul class="collapsible" data-collapsible="accordion">
       <li>
-        <div class="collapsible-header"><i class="fa fa-caret-down right"></i>{{ videos.title }}</div>
+        <div class="collapsible-header"><i class="material-icons right">arrow_drop_down</i>{{ videos.title }}</div>
         <div class="collapsible-body">
           <p class="grey lighten-2">{{ videos.detail1 }}</p>
           <p>{{ videos.Speaker }}</p>
           <p class="grey lighten-2">{{ videos.detail2 }}</p>
           <p>{{ videos.position }}</p>
-          <p class="grey lighten-2 center-align">
-            <a class="waves-effect waves-light btn grey" href="http://www.agri-inno.net/agri-inno-Videos/{{ videos.download }}"><i class="fa fa-cloud-download left"></i>Download</a>
-          </p>
+          <p class="grey lighten-2 center"><a class="waves-effect waves-light btn grey" href="http://www.agri-inno.net/agri-inno-Videos/{{ videos.download }}"><i class="material-icons left">cloud_download</i>Download</a></p>
         </div>
       </li>
     </ul>
   </div>
   {% endfor %}
+</div>
+
+<!-- page loading animation -->
+<div class="loading valign-wrapper">
+  <div class="sk-cube-grid valign">
+    <div class="sk-cube sk-cube1"></div>
+    <div class="sk-cube sk-cube2"></div>
+    <div class="sk-cube sk-cube3"></div>
+    <div class="sk-cube sk-cube4"></div>
+    <div class="sk-cube sk-cube5"></div>
+    <div class="sk-cube sk-cube6"></div>
+    <div class="sk-cube sk-cube7"></div>
+    <div class="sk-cube sk-cube8"></div>
+    <div class="sk-cube sk-cube9"></div>
+    <br><br><br><p>Loading...</p>
+  </div>
 </div>

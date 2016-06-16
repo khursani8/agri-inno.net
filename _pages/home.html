@@ -1,27 +1,26 @@
 ---
 layout: default
+permalink: /
 ---
 <!-- Header -->
 <div class="container section row">
   <div class="col s12 center-align">
-    {{ content }}
+    <br><img src="/assets/images/heading.png" alt="{{ site.description }}" class="responsive-img" />
   </div>
 </div>
 
 <!-- Videos -->
-<div class="grey lighten-1">
-  <div class="container section row">
-    <div class="col s12 center">
-      <h6>Watch the Agri-Inno talks &nbsp;&nbsp;&nbsp;<a class="waves-effect btn black" href="/videos">Watch</a></h6>
-    </div>
+<div class="section row green lighten-1">
+  <div class="col s12 center">
+    <h6>Watch the Agri-Inno talks &nbsp;&nbsp;&nbsp;<a class="waves-effect waves-orange btn white orange-text" href="/videos.html">Videos</a></h6>
   </div>
 </div>
 
 <!-- Poster -->
-<img src="/assets/images/agri-inno.png" alt="Agri-Inno" class="responsive-img" />
+<img src="/assets/images/agri-inno2.png" alt="Agri-Inno" class="responsive-img minus-20" />
 <div class="section row">
   <!-- Blog -->
-  <div class="col s8">
+  <div class="col s12 m7 l8">
     <div class="section">
       <h5>Latest Posts</h5>
       {% for post in site.categories['blog'] limit:3 %}
@@ -38,7 +37,7 @@ layout: default
     </div>
   </div>
   <!-- News -->
-  <div class="col s4">
+  <div class="col s12 m5 l4">
     <div class="section">
       <h5>News</h5>
       <div class="card-panel white">
@@ -52,10 +51,8 @@ layout: default
 </div>
 
 <!-- Materials -->
-<div class="grey lighten-1">
-  <div class="container section row">
-    <div class="col s12 center">
-      <h6>Get the Agri-Inno materials &nbsp;&nbsp;&nbsp;<a class="waves-effect btn black" href="#">Download</a></h6>
-    </div>
+<div class="section row green lighten-1 plus-20">
+  <div class="col s12 center">
+    <h6>Get the Agri-Inno materials &nbsp;&nbsp;&nbsp;<a class="waves-effect waves-orange btn white orange-text" href="#!">Download</a></h6>
   </div>
 </div>
