@@ -2,6 +2,7 @@
 layout: posts
 title: Hello World
 categories: blog
+author: Guest
 ---
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam quasi maxime quas repudiandae nam id temporibus, at et non officiis consectetur voluptate deserunt officia minima placeat tempore illum asperiores quo assumenda praesentium?
 

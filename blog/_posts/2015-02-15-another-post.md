@@ -1,7 +1,8 @@
 ---
 layout: posts
-title: Example 3
+title: Another post
 categories: blog
+author: Admin
 ---
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni nisi corrupti praesentium voluptatum harum expedita temporibus ipsam, odit ad distinctio! Labore cupiditate distinctio facere earum, iste! Reiciendis possimus voluptatum explicabo corporis ab.
 

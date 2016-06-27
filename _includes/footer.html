@@ -1,8 +1,10 @@
 <footer class="page-footer orange darken-2">
-  <div class="container section center-align">
-    {% for social in site.data.social %}
-    <a href="{{ social.link }}" target="_blank"><img src="/assets/images/social/{{ social.network }}.png" alt="{{ social.network }}" class="responsive-img" /></a>
-    {% endfor %}
+  <div class="container section row center-align">
+    <div class="col s12">
+      {% for social in site.data.social %}
+      <a href="{{ social.link }}" target="_blank"><img src="/assets/images/social/{{ social.network }}.png" alt="{{ social.network }}" class="responsive-img" /></a>
+      {% endfor %}
+    </div>
   </div>
   <div class="footer-copyright center-align">
     &copy; 2016 Crops For the Future
@@ -11,5 +13,5 @@
 
 <!-- scroll to top -->
 <div class="fixed-action-btn scroll-up">
-  <a class="btn-floating btn-small waves-effect waves-light orange darken-1" href="#"><i class="material-icons">arrow_upward</i></a>
+  <a class="btn-floating btn-small waves-effect waves-light green lighten-1" href="#"><i class="material-icons">arrow_upward</i></a>
 </div>
