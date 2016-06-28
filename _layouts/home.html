@@ -18,25 +18,8 @@ layout: default
 <!-- Poster -->
 <img src="/assets/images/agri-inno.png" alt="Agri-Inno" class="responsive-img minus-20" />
 <div class="section row">
-  <!-- Blog -->
-  <div class="col s12 m7 l8 hide-on-small-only">
-    <div class="section">
-      <h5>Latest Posts</h5>
-      {% for post in site.categories['blog'] limit:3 %}
-      <div class="card-panel white">
-        <span class="black-text">
-          <p class="bold">{{ post.title }}</p>
-          <div class="justify">
-            {{ post.excerpt }}
-            <a href="{{ post.url }}.html">Read more</a>
-          </div>
-        </span>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
   <!-- News -->
-  <div class="col s12 m5 l4">
+  <div class="col s12">
     <div class="section">
       <h5>News</h5>
       <div class="card-panel white">

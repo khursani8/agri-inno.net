@@ -3,4 +3,4 @@ layout: home
 permalink: /
 ---
 
-News content goes here
+Announcement section
