@@ -1,6 +1,9 @@
 _site
+gallery
 .DS_Store
 bower.json
 .sass-cache
 bower_component
 .jekyll-metadata
+assets/images/2016
+assets/images/social
