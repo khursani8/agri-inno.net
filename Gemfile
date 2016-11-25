@@ -1,5 +1,6 @@
-source :rubygems
+source 'https://rubygems.org'
 
+gem "ffi"
 gem "jekyll"
 gem "rmagick"
 gem "jekyll-gallery-generator"
